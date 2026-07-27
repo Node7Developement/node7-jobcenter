@@ -1,7 +1,11 @@
 [README.md](https://github.com/user-attachments/files/30435841/README.md)
 # node7-jobcenter
 
-### ADD TO NODE7-CORE/SHARED/JOBS.LUA
+## Public Job Definitions
+
+Add the following jobs inside `Node7Shared.Jobs`, directly before the table’s final closing brace.
+
+```lua
 lumberjack = {
     name = 'lumberjack',
     label = 'Lumberjack',
@@ -141,6 +145,9 @@ townworker = {
         ['3'] = { name = 'Maintenance Foreman', payment = 10 },
     },
 },
+```
+
+> Do not remove or replace the existing `unemployed`, law-enforcement, or medic job definitions.
 
 
 
