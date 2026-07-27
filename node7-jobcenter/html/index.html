@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NODE7 Employment Board</title>
+    <style>
+        :root, html, body, #app {
+            background: rgba(0, 0, 0, 0) !important;
+            background-color: transparent !important;
+        }
+        html, body { width: 100%; height: 100%; margin: 0; }
+        body.nui-hidden { pointer-events: none !important; }
+        #app.is-hidden { visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="nui-hidden">
+    <main id="app" class="app is-hidden" aria-hidden="true">
+        <section class="board" role="dialog" aria-modal="true" aria-label="Public Employment Board">
+            <i class="nail nail-left" aria-hidden="true"></i>
+            <i class="nail nail-right" aria-hidden="true"></i>
+
+            <header class="board-header">
+                <div>
+                    <p id="subtitle" class="eyebrow">PUBLIC WORK • HONEST PAY • NO WHITELIST</p>
+                    <h1 id="title">NODE7 EMPLOYMENT BOARD</h1>
+                    <p id="centerLabel" class="office-name">Public Employment Office</p>
+                </div>
+                <button id="closeButton" class="close-button" type="button" aria-label="Close">×</button>
+            </header>
+
+            <section class="employment-card">
+                <span class="stamp">EMPLOYMENT RECORD</span>
+                <div>
+                    <small>CURRENT OCCUPATION</small>
+                    <strong id="currentJobLabel">Civilian</strong>
+                    <span id="currentJobGrade">Freelancer</span>
+                </div>
+                <button id="leaveButton" class="ink-button is-hidden" type="button">Leave Public Job</button>
+            </section>
+
+            <nav id="categories" class="categories" aria-label="Work categories"></nav>
+
+            <div class="board-body">
+                <section class="notice-column">
+                    <div id="restrictedNotice" class="restricted-notice is-hidden">
+                        Your current department job cannot be replaced at a public employment board.
+                    </div>
+                    <div id="emptyJobs" class="empty-jobs is-hidden">
+                        <strong>NO PUBLIC WORK POSTED</strong>
+                        <p>No public job notices are configured for this employment board.</p>
+                    </div>
+                    <div id="jobList" class="job-list"></div>
+                </section>
+
+                <aside class="details-column">
+                    <div id="emptyDetails" class="empty-details">
+                        <span class="seal">N7</span>
+                        <h2>Select a posted notice</h2>
+                        <p>Choose a public occupation, take the job, then mark its configured work site.</p>
+                    </div>
+
+                    <article id="jobDetails" class="job-details is-hidden">
+                        <div class="detail-head">
+                            <span id="detailBadge" class="detail-badge">LW</span>
+                            <div>
+                                <small id="detailCategory">LABOR</small>
+                                <h2 id="detailTitle">Lumberjack</h2>
+                                <p id="detailLocation">Cumberland Forest</p>
+                            </div>
+                        </div>
+
+                        <p id="detailDescription" class="description"></p>
+
+                        <dl class="work-facts">
+                            <div>
+                                <dt>STARTING RANK</dt>
+                                <dd id="detailGrade">Worker</dd>
+                            </div>
+                            <div>
+                                <dt>REPORT TO</dt>
+                                <dd id="detailStart">Work Site</dd>
+                            </div>
+                            <div>
+                                <dt>STATUS</dt>
+                                <dd class="available">WORK AVAILABLE</dd>
+                            </div>
+                        </dl>
+
+                        <p id="currentHint" class="current-hint is-hidden">You already hold this job. Travel to the work site to begin the actual activity.</p>
+
+                        <div class="detail-actions">
+                            <button id="routeButton" class="paper-button secondary" type="button">Mark Work Site</button>
+                            <button id="primaryButton" class="paper-button primary" type="button">Take Job</button>
+                        </div>
+                    </article>
+                </aside>
+            </div>
+
+            <footer class="board-footer">
+                <span>PUBLIC EMPLOYMENT ONLY</span>
+                <span>ESC CLOSES THE BOARD</span>
+            </footer>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

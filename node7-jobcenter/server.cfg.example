@@ -1,0 +1,3 @@
+ensure node7-core
+ensure node7-interaction
+ensure node7-jobcenter

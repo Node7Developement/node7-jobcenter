@@ -1,0 +1,21 @@
+$engine: 3
+$onesync: on
+name: NODE7 Job Center
+author: NODE7 Development Studios
+description: RedM public employment board with NODE7 Core direct-export integration.
+version: 2.2.1
+
+tasks:
+  - action: ensure_dir
+    path: ./resources/[node7]/node7-jobcenter
+
+  - action: copy_path
+    src: ./node7-jobcenter
+    dest: ./resources/[node7]/node7-jobcenter
+
+  - action: append
+    file: ./server.cfg
+    text: |
+      ensure node7-core
+      ensure node7-interaction
+      ensure node7-jobcenter
