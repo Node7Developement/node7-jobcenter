@@ -1,7 +1,14 @@
 [README.md](https://github.com/user-attachments/files/30435841/README.md)
 # node7-jobcenter
 
-## Public Job Definitions
+## Public Job Definitions (Read Below)
+
+
+
+
+
+
+<img width="1147" height="793" alt="jobcenterrrrrr" src="https://github.com/user-attachments/assets/5bbc2477-651b-4087-9f10-3d63bc2d6833" />
 
 Add the following jobs inside `Node7Shared.Jobs`, directly before the table’s final closing brace.
 
